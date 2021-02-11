@@ -2,7 +2,9 @@
 
 ibmcloud login --apikey "${IBMCLOUD_API_KEY}"
 
-if ! ibmcloud account users | grep -q "toolkittest1@ibm.com"; then
-  echo "User not added to account: toolkittest1@ibm.com"
+USER="toolkittest1@ibm.com"
+
+if ! ibmcloud account users | grep -q "${USER}"; then
+  echo "User not added to account: ${USER}"
   exit 1
 fi
