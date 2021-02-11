@@ -1,4 +1,4 @@
 variable "users" {
-  type        = string
-  description = "Comma-separated list of users who should be invited to the account"
+  type        = list(string)
+  description = "List of users who should be invited to the account"
 }
