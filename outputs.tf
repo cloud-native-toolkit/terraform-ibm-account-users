@@ -1,5 +1,5 @@
-#output "myoutput" {
-#  description = "Description of my output"
-#  value       = "value"
-#  depends_on  = [<some resource>]
-#}
+output "users" {
+  description = "The list of users who have been invited"
+  value       = local.users
+  depends_on  = [ibm_iam_user_invite.invite_users]
+}

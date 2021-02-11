@@ -1,6 +1,4 @@
-#variable "myvariable" {
-#  type        = string
-#  description = "A description of my variable"
-#  default     = ""
-#}
-
+variable "users" {
+  type        = string
+  description = "Comma-separated list of users who should be invited to the account"
+}
