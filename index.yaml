@@ -15,6 +15,20 @@ versions:
     variables:
       - name: users
         scope: module
+        type: list(string)
+        description: List of users who should be invited to the account
+    version: v1.1.0
+    outputs:
+      - name: users
+        description: The list of users who have been invited
+  - platforms:
+      - kubernetes
+      - ocp3
+      - ocp4
+    dependencies: []
+    variables:
+      - name: users
+        scope: module
         type: string
         description: Comma-separated list of users who should be invited to the account
     version: v1.0.0
