@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-ibmcloud login --apikey "${IBMCLOUD_API_KEY}"
+set -x
+
+ibmcloud login --apikey "${IBMCLOUD_API_KEY}" -r us-east
 
 USER="toolkittest1@ibm.com"
 
