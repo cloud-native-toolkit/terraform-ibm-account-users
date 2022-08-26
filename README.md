@@ -20,6 +20,8 @@ None
 
 ## Example usage
 
+[Refer Test cases for more details](test/stages/stage1-invite-users.tf)
+
 ```hcl-terraform
 module "invite_users" {
   source = "github.com/ibm-garage-cloud/terraform-ibm-account-users.git?ref=v1.0.0"
