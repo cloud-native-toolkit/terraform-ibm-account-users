@@ -1,4 +1,4 @@
-id: github.com/cloud-native-toolkit/terraform-ibm-account-users
+id: github.com/terraform-ibm-modules/terraform-ibm-toolkit-account-users
 name: ibm-account-users
 type: terraform
 description: Module to invite users to the account
@@ -7,6 +7,23 @@ tags:
   - tools
   - devops
 versions:
+  - platforms:
+      - kubernetes
+      - ocp3
+      - ocp4
+    providers:
+      - name: ibm
+        source: ibm-cloud/ibm
+    dependencies: []
+    variables:
+      - name: users
+        type: list(string)
+        description: List of users who should be invited to the account
+        scope: module
+    version: v1.1.2
+    outputs:
+      - name: users
+        description: The list of users who have been invited
   - platforms:
       - kubernetes
       - ocp3
